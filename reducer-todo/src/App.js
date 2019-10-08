@@ -12,6 +12,7 @@ function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
   return (
     <div className="App">
+      <h1>Femi's routine</h1>
       <Form dispatch={dispatch} />
       <button onClick={() => dispatch({type: "removeCompleted"})}>Clear Completed</button>
       {state.map(item => {
