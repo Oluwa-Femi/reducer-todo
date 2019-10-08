@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {initialState, reducer} from "./reducers/reducer"
 
 function App() {
   return (
