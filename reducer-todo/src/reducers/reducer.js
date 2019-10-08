@@ -24,7 +24,7 @@ export function reducer(state, action) {
         {
           item: action.payload,
           completed: false,
-          id: new Date()
+          id: Date.now()
         }
       ];
       case "toggleCompleteness":
@@ -33,8 +33,9 @@ export function reducer(state, action) {
                     return {...item, completed: !item.completed}
                 }
                 return item
-            }
-            )
+            })
+            case "removeCompleted":
+                return state.filter(item => !item.completed)
     default:
       return state;
   }
